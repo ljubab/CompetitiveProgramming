@@ -4,6 +4,8 @@ using namespace std;
 
 const int MOD = 1e9 + 7;
 
+//mislim da ipak necu koristiti ovaj kod, izgleda previse komplikovano o_O
+
 struct Modular
 {
     int value;
