@@ -26,12 +26,36 @@ template <class T> using Tree = tree<T, null_type, less<T>, rb_tree_tag, tree_or
 template<class T> bool ckmin(T &a, const T &b) {return a > b ? a = b, 1 : 0;}
 template<class T> bool ckmax(T &a, const T &b) {return a < b ? a = b, 1 : 0;}
 
+//DEBUG TEMPLATE POCINJE OVDE
+
+void __print(int x) {cerr << x;}
+void __print(long long x) {cerr << x;}
+void __print(double x) {cerr << x;}
+void __print(long double x) {cerr << x;}
+void __print(char x) {cerr << '\'' << x << '\'';}
+void __print(const string &x) {cerr << '\"' << x << '\"';}
+void __print(bool x) {cerr << (x ? "true" : "false");}
+
+template<typename T, typename V>
+void __print(const pair<T, V> &x) {cerr << '{'; __print(x.first); cerr << ','; __print(x.second); cerr << '}';}
+template<typename T>
+void __print(const T &x) {int f = 0; cerr << '{'; for(auto z : x) cerr << (f++ ? "," : ""), __print(z); cerr << "}";}
+void _print() {cerr << "]\n";}
+template <typename T, typename... V>
+void _print(T t, V... v) {__print(t); if(sizeof...(v)) cerr << ", "; _print(v...);}
+
+#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+
+//DEBUG TEMPLATE SE ZAVRSAVA OVDE
+
+const char nl = '\n';
+
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
 
-    
+
 
 }
