@@ -44,18 +44,21 @@ void _print() {cerr << "]\n";}
 template <typename T, typename... V>
 void _print(T t, V... v) {__print(t); if(sizeof...(v)) cerr << ", "; _print(v...);}
 
-#define debug(x...) cerr << "[" << #x << "] = ["; _print(x)
+#ifdef ljuba
+#define debug(x...) cerr << "LINE(" << __LINE__ << ") -> " << "[" << #x << "] = ["; _print(x)
+#else
+#define debug(x...)
+#endif
 
 //DEBUG TEMPLATE SE ZAVRSAVA OVDE
 
 const char nl = '\n';
 
-int main()
-{
+int main() {
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
 
-
-
+    
+    
 }
