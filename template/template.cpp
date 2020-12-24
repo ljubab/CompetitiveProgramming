@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
  
-
 using namespace std;
-
 
 typedef long long ll;
 typedef long double ld;
@@ -22,7 +20,6 @@ typedef vector<pll> vpll;
 typedef vector<vpii> vvpii;
 typedef vector<vpll> vvpll;
 
-
 #define pb push_back
 #define mp make_pair
 #define all(x) (x).begin(), (x).end()
@@ -30,11 +27,9 @@ typedef vector<vpll> vvpll;
 #define sz(x) (int)(x).size()
 #define fi first
 #define se second
- 
 
 template<class T> bool ckmin(T &a, const T &b) {return a > b ? a = b, 1 : 0;}
 template<class T> bool ckmax(T &a, const T &b) {return a < b ? a = b, 1 : 0;}
-
 
 void __print(int x) {cerr << x;}
 void __print(long long x) {cerr << x;}
@@ -58,12 +53,10 @@ void _print(T t, V... v) {__print(t); if(sizeof...(v)) cerr << ", "; _print(v...
 #define dbg(x...)
 #endif
 
-
 const char nl = '\n';
 
-
 void solve() {
-       
+
 }
 
 int main() {
