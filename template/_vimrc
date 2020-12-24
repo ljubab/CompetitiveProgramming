@@ -14,16 +14,17 @@ syntax on
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {{ {
+inoremap {; {<CR>};<ESC>O
 inoremap {} {}
 
-autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 -Wshadow -Wall % -o %:r -O2 -Wl,--stack,268435456<CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> !g++ -std=c++17 -Wshadow -Dljuba -Wall % -o %:r -O2 -Wl,--stack,268435456<CR>
 autocmd filetype cpp nnoremap <F8> :!%:r<CR>
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s /^\(\s*\)\/\/\/\//\1<CR> $
 
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-set guifont=Consolas:h12
-colorscheme molokai
+set guifont=Inconsolata\ SemiBold:h12
+colorscheme gruvbox
 
 autocmd BufNewFile *.cpp 0r C:\Users\ljuba\template.cpp
