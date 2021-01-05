@@ -1,6 +1,17 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'scrooloose/nerdtree'
+Plug 'yggdroot/indentline'
+
+call plug#end()
+
 set ts=4
 set sw=4
+
 set autoindent
+set smartindent
 set softtabstop=4
 set backspace=indent,eol,start
 set backspace=2
@@ -9,6 +20,7 @@ set number
 set relativenumber
 set hls
 set ruler
+set pastetoggle=<F2>
 syntax on
 
 inoremap { {}<left>
@@ -24,7 +36,7 @@ autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s /^\(\s*\)\/\/\/\//
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-set guifont=Inconsolata\ SemiBold:h12
-colorscheme gruvbox
+set guifont=Inconsolata_Medium:h14:W500:cANSI:qDRAFT
+colorscheme jellybeans
 
 autocmd BufNewFile *.cpp 0r C:\Users\ljuba\template.cpp
